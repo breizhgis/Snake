@@ -1,16 +1,16 @@
-# Initialize a 10x10 grid with dots
-grid = [['.' for _ in range(10)] for _ in range(10)]
+def initial_grid(rows=10, cols=10):
+    # Initialize the grid with dots
+    grid = [['.' for _ in range(cols)] for _ in range(rows)]
+    return grid
 
-# Replace specific positions with 'X' using nested loops
-for row in range(10):
-    for col in range(10):
-        # Replace dots with 'X' where you want
-        if (row + col) % 2 == 0:  # Example: 'X' on every even-index sum
-            grid[row][col] = 'X'
+def print_grid(grid):
+    for row in grid:
+        print(' '.join(row))
 
-# Print the grid
-for row in grid:
-    print(' '.join(row))
+grid = initial_grid()
+print('The Pyladies\' Slither Sisters present: ')
+print_grid(grid)
+print('Welcome to our version of Snake!')
 
 
 
